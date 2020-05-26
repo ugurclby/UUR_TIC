@@ -1,0 +1,14 @@
+** Projede  
+	Ýþ Katmaný => Business
+		SAdece iþ kodlarý yer alýr.
+		Loglama,cache..
+	Veri Eriþim Katmaný => DataAccess 
+		Veri tabbaný iþlemleri yazýlýr. 
+		Ýþ Kodlarý Buraya yazýlmaz.
+		Concrete klasörü => Entity ile ilgili bir iþlem yapýlcaksa kodlar buraya yazýlýr.
+		Abstract klasöürü => Ýþ katmaný ile iletiþim kuracaðýzm katman.
+		SOLID => Dependies invercison prensibine göre üst katmanlar alt katmanlar ile direk irtibat kuramaz. Yani new'lenemez.
+	Veri Katmaný => Entities
+
+	Core Katmaný => Yapýlan proje ile alaklý hiç bir bilgi yer almaz. Genel belkide baþka projelerde de kullanýlabilecek Class'lar yer alýr.		
+		DataAcess klasörü içerisine EntityFramework ve Hibernate klasörü eklendi. Sebebi Çalýþmýþ olduðumuz teknoloji entityframework olduðu için. Yarýn bir gün hibernate olabilir. Yada farklý bir orm teknolojisi olabilir.
