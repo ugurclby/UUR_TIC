@@ -21,9 +21,9 @@ namespace Uur.Northwind.Business.Concrete
             _productDal.Add(product);
         }
 
-        public void Delete(Product product)
+        public void Delete(int ProductId)
         {
-            _productDal.Delete(product);
+            _productDal.Delete(new Product { ProductId = ProductId });
         }
 
         public List<Product> GetAll()
@@ -33,7 +33,7 @@ namespace Uur.Northwind.Business.Concrete
 
         public List<Product> GetByCategory(int CategoryId)
         {
-            return _productDal.GetList().Where(cat => cat.CategoryID == CategoryId).ToList();
+            return _productDal.GetList().Where(cat => cat.CategoryID == CategoryId || CategoryId == 0).ToList();
         }
 
         public void Update(Product product)

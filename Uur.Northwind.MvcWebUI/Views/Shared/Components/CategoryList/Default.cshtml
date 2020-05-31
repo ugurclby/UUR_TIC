@@ -1,0 +1,16 @@
+﻿@model Uur.Northwind.MvcWebUI.Models.CategoryListViewModel
+@{
+    string classText = "";
+}
+<div class="list-group">
+
+
+    @foreach (var category in Model.Categories)
+    {
+
+        classText = (Model.CurrentCategoryId == category.CategoryId ? "list-group-item list-group-item-action active" : "list-group-item list-group-item-action");
+
+        <a href="/Product/Index?categoryId=@category.CategoryId" class="@classText"> @category.CategoryName</a>
+    }
+
+</div>
