@@ -36,6 +36,11 @@ namespace Uur.Northwind.Business.Concrete
             return _productDal.GetList().Where(cat => cat.CategoryID == CategoryId || CategoryId == 0).ToList();
         }
 
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(x => x.ProductId == productId);
+        }
+
         public void Update(Product product)
         {
             _productDal.Update(product);

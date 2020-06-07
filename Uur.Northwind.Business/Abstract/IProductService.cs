@@ -12,6 +12,7 @@ namespace Uur.Northwind.Business.Abstract
         void Add(Product product);
         void Update (Product product);
         void Delete(int ProductId);
+        Product GetById(int productId);
     }
 }
 

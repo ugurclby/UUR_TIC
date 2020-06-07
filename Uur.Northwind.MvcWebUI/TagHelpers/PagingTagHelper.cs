@@ -29,8 +29,9 @@ namespace Uur.Northwind.MvcWebUI.TagHelpers
 
             for (int i = 1; i <= PageCount; i++)
             {
-                sb.AppendFormat("<li class ='{0}'>", i == CurrentPage ? "active" : "");
-                sb.AppendFormat("<a href='/product/index?page={0}&categoryId={1}'>{2}</a>", CurrentPage, CurrentCategory, i);
+                //<li class="page-item"><a class="page-link" href="#">1</a></li>
+                sb.AppendFormat("<li class ='{0}'>", i == CurrentPage ? "page-item active" : "page-item");
+                sb.AppendFormat("<a class='page-link' href='/product/index?page={0}&categoryId={1}'>{2}</a>", i, CurrentCategory, i);
                 sb.Append("</li>");
             }
             //sb.Append("</ul>");
